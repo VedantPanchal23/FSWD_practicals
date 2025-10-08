@@ -25,8 +25,6 @@ A comprehensive collection of 10 practical assignments designed to build profici
 - [Technologies Used](#technologies-used)
 - [Installation & Setup](#installation--setup)
 - [Learning Outcomes](#learning-outcomes)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## 📖 Overview
 
