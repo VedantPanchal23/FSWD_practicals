@@ -1,0 +1,41 @@
+/* Main container for the app */
+.app-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Styling for the navigation bar */
+.navbar {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* Styling for navigation links */
+.nav-link {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for link on hover */
+.nav-link:hover {
+  background-color: #555;
+}
+
+/* Style for the main content area */
+.content {
+  padding: 20px;
+  border-top: 2px solid #eee;
+}

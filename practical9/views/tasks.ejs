@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .task { border-bottom: 1px solid #ddd; padding: 10px 0; display: flex; justify-content: space-between; align-items: center; }
+        .task-actions { display: flex; gap: 10px; }
+        form { margin-top: 20px; }
+        input, textarea { width: 95%; padding: 10px; margin-bottom: 10px; }
+        button { padding: 10px 15px; color: #fff; border: none; cursor: pointer; }
+        .btn-create { background: #28a745; }
+        .btn-delete { background: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <form action="/tasks" method="POST">
+            <h2>Add New Task</h2>
+            <input type="text" name="title" placeholder="Task Title" required>
+            <textarea name="description" placeholder="Task Description"></textarea>
+            <button class="btn-create" type="submit">Add Task</button>
+        </form>
+        <hr>
+        <h2>Current Tasks</h2>
+        <% tasks.forEach(task => { %>
+            <div class="task">
+                <div>
+                    <strong><%= task.title %></strong>
+                    <p><%= task.description %></p>
+                </div>
+                <div class="task-actions">
+                    <form action="/tasks/delete/<%= task._id %>?_method=DELETE" method="POST">
+                         <button type="submit" class="btn-delete">Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>
